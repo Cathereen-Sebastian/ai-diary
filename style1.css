@@ -1,0 +1,101 @@
+/* Reset and Base Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfcfe;
+  }
+  
+  /* 🌟 Top Header */
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6C63FF;
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-sizing: border-box;
+  }
+  
+  .account-icon {
+    margin-left: 20px; /* gives space from the edge */
+  }
+  
+  .account-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+  }
+  
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .navbar {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #ffd3e0;
+  }
+  
+  /* Account Icon */
+  .account-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* ✨ Center Content */
+  .home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding-top: 80px; /* space for header */
+  }
+  
+  .content-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #6C63FF;
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: #FF4B5C;
+  }
+  
+  .site-description {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  

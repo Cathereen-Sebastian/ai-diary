@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - AI Diary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="content-box">
+      <h2>Welcome to Your AI Diary! 💖</h2>
+      <p class="subheading">Track your moods, reflect on your journey, and take care of your heart!</p>
+
+      <!-- Toggle Links -->
+      <div id="toggleLinks">
+        <a href="#" id="toSignUp">Sign Up</a> | <a href="#" id="toLogin">Login</a>
+      </div>
+
+      <!-- Login Form -->
+      <div id="loginFormDiv">
+        <form id="loginForm">
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" id="loginButton">Login</button>
+          <p id="error-message" class="error-message"></p>
+        </form>
+      </div>
+
+      <!-- Sign Up Form -->
+      <div id="signUpFormDiv" style="display:none;">
+        <form id="signUpForm">
+          <div class="input-group">
+            <label for="newEmail">Email</label>
+            <input type="email" id="newEmail" placeholder="Enter your email" required>
+          </div>
+          <div class="input-group">
+            <label for="newPassword">Password</label>
+            <input type="password" id="newPassword" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" id="signUpButton">Sign Up</button>
+          <p id="signUpErrorMessage" class="error-message"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

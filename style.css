@@ -1,0 +1,139 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6C63FF, #00BFAE); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+  }
+  
+  .login-container {
+    background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .content-box {
+    animation: bounceIn 1s ease-in-out;
+  }
+  
+  h2 {
+    color: #6C63FF;
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .subheading {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background: #f3f4f6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-color: #6C63FF;
+    box-shadow: 0 4px 10px rgba(108, 99, 255, 0.5);
+  }
+  
+  button {
+    width: 100%;
+    padding: 14px;
+    background-color: #6C63FF;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: #5a54e0;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  #toggleLinks {
+    margin-top: 10px;
+  }
+  
+  #toggleLinks a {
+    font-size: 14px;
+    color: #6C63FF;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  #toggleLinks a:hover {
+    text-decoration: underline;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
