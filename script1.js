@@ -1,10 +1,17 @@
 // Home page logic
-// Toggle dropdown menu
 const accountIcon = document.getElementById("accountIcon");
 const dropdown = document.getElementById("accountDropdown");
 
 accountIcon.addEventListener("click", () => {
-  dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  const isVisible = dropdown.style.display === "block";
+  dropdown.style.display = isVisible ? "none" : "block";
+});
+
+// Hide dropdown when clicking outside
+document.addEventListener("click", function(event) {
+  if (!accountIcon.contains(event.target) && !dropdown.contains(event.target)) {
+    dropdown.style.display = "none";
+  }
 });
 
 // Optional: Hide dropdown when clicking outside
