@@ -1,4 +1,19 @@
 // Home page logic
+// Toggle dropdown menu
+const accountIcon = document.getElementById("accountIcon");
+const dropdown = document.getElementById("accountDropdown");
+
+accountIcon.addEventListener("click", () => {
+  dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+});
+
+// Optional: Hide dropdown when clicking outside
+document.addEventListener("click", function(event) {
+  if (!accountIcon.contains(event.target) && !dropdown.contains(event.target)) {
+    dropdown.style.display = "none";
+  }
+});
+
 window.addEventListener('DOMContentLoaded', function () {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     const userEmailDisplay = document.getElementById('userEmailDisplay');
