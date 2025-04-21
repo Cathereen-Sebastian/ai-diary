@@ -2,14 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Diary - Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #fdfcfe;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #6C63FF;
+      color: white;
+      padding: 15px 30px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar a:hover {
+      color: #ffd3e0;
+    }
+
+    .account-icon {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .account-icon img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .account-dropdown {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: white;
+      width: 220px;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      display: none;
+      z-index: 999;
+    }
+
+    .account-dropdown ul {
+      list-style: none;
+    }
+
+    .account-dropdown li {
+      border-bottom: 1px solid #eee;
+    }
+
+    .account-dropdown li a {
+      display: block;
+      padding: 12px 16px;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .account-dropdown li a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .logout a {
+      color: #e63946;
+    }
+
+    .home-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      height: 100vh;
+      padding-top: 120px;
+    }
+
+    .content-box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      width: 80%;
+      max-width: 500px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #6C63FF;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: #FF4B5C;
+    }
+
+    .site-description {
+      color: #555;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- 🌟 Top Header -->
-  <header class="top-header">
+  <header>
     <div class="logo">AI Diary</div>
     <nav class="navbar">
       <a href="#">Journaling</a>
@@ -19,33 +143,44 @@
       <a href="#">Memory Lane</a>
     </nav>
     <div class="account-icon" id="accountIcon">
-      <img src="https://via.placeholder.com/40" alt="Account Icon" />
+      <img src="https://via.placeholder.com/40" alt="Account Icon">
+      <div class="account-dropdown" id="accountDropdown">
+        <ul>
+          <li><a href="#">👤 My Account</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+          <li><a href="#">📜 History</a></li>
+          <li><a href="#">🕒 Recents</a></li>
+          <li><a href="#">💳 Subscription</a></li>
+          <li class="logout"><a href="#">🚪 Log out</a></li>
+        </ul>
+      </div>
     </div>
   </header>
 
-  <!-- 💖 Dropdown Menu -->
-  <div class="account-dropdown" id="accountDropdown">
-    <ul>
-      <li><a href="#">👤 My Account</a></li>
-      <li><a href="#">⚙️ Settings</a></li>
-      <li><a href="#">📜 History</a></li>
-      <li><a href="#">🕒 Recents</a></li>
-      <li><a href="#">💳 Subscription</a></li>
-      <li class="logout"><a href="#">🚪 Log out</a></li>
-    </ul>
-  </div>
-
-  <!-- ✨ Center Content -->
   <div class="home-container">
     <div class="content-box">
       <h1><span class="highlight">AI Diary</span></h1>
       <p class="site-description">
-        Welcome to <strong>AI Diary</strong>, your personal space for mood tracking, journaling, and self-care.
-        This app helps you reflect, recharge, and rise. 🌼
+        Welcome to <strong>AI Diary</strong>, your magical self-care and journaling BFF!<br />
+        Track your mood, reflect through journaling, get inspired daily and so much more. ✨
       </p>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const accountIcon = document.getElementById("accountIcon");
+    const dropdown = document.getElementById("accountDropdown");
+
+    accountIcon.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!accountIcon.contains(e.target)) {
+        dropdown.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
